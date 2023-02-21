@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ExpenseItem from './components/content/Expense/ExpenseItem';
 
 import Navbar from './components/Nav/Navbar';
+import MyWrapper from './components/MyWrapper';
 
 const Content = styled.div`
   background-color: bisque;
@@ -68,6 +69,9 @@ const App = () => {
         </ExpenseCard>
         {/* ---------------- */}
       </Content>
+      <MyWrapper>
+        <h1>hello i am in the wrapper</h1>
+      </MyWrapper>
     </div>
   );
 };
