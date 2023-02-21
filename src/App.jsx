@@ -7,12 +7,13 @@ import MyWrapper from './components/MyWrapper';
 
 const Content = styled.div`
   background-color: bisque;
-  height: 90vh;
+  min-height: 90vh;
   margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 10px;
+  padding-bottom: 10px;
   p {
     margin: 10px;
     padding: 1rem;

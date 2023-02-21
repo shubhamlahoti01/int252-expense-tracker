@@ -7,9 +7,10 @@ const WrapperCont = styled.div`
   color: black;
   display: flex;
   justify-content: center;
-  border: 2px solid black;
+  border: 20px solid black;
   align-items: center;
   margin: 1rem;
+  border-radius: 20%;
 `;
 const MyWrapper = (props) => {
   return <WrapperCont>{props.children}</WrapperCont>;
