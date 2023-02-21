@@ -17,6 +17,17 @@ const Content = styled.div`
     padding: 1rem;
   }
 `;
+const ExpenseCard = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  color: white;
+  width: 95%;
+  background-color: black;
+  border-radius: 10%;
+`;
 const App = () => {
   const values = [
     {
@@ -44,15 +55,17 @@ const App = () => {
     <div className='App'>
       <Navbar />
       <Content className='content'>
-        <h1>Expense</h1>
         {/* ---------------- */}
-        {values.map((item) => (
-          <ExpenseItem
-            title={item.title}
-            date={item.date}
-            amount={item.amount}
-          />
-        ))}
+        <ExpenseCard>
+          <h1>Expense</h1>
+          {values.map((item) => (
+            <ExpenseItem
+              title={item.title}
+              date={item.date}
+              amount={item.amount}
+            />
+          ))}
+        </ExpenseCard>
         {/* ---------------- */}
       </Content>
     </div>
