@@ -60,8 +60,9 @@ const App = () => {
         {/* ---------------- */}
         <ExpenseCard>
           <h1>Expense</h1>
-          {values.map((item) => (
+          {values.map((item, ind) => (
             <ExpenseItem
+              key={ind}
               title={item.title}
               date={item.date}
               amount={item.amount}
@@ -71,7 +72,7 @@ const App = () => {
         {/* ---------------- */}
       </Content>
       <MyWrapper>
-        <h1>hello i am in the wrapper</h1>
+        <h1 style={{ color: 'green' }}>hello i am in the wrapper</h1>
       </MyWrapper>
     </div>
   );

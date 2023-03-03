@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import RightNav from './RightNav';
 
@@ -39,6 +39,15 @@ const StyledBurger = styled.div`
 
 const Burger = () => {
   const [open, setOpen] = useState(false);
+  const [i, setI] = useState(0);
+
+  useEffect(() => {
+    setI(i + 1);
+    console.log(
+      i + 'i am use effect, i will run when open variable will change'
+    );
+  }, [open]);
+
   return (
     <>
       <StyledBurger open={open} onClick={() => setOpen(!open)}>
